@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+    
+  ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+    /* EOS */
+  </style>
+
+  <script id="insert"></script>
+
+
+</head>
+<body>
+      <script type="text/javascript">//<![CDATA[
+
+
+function initMap(p,c,b) {
+  
+var p = [{lat: 47.55664, lng: -122.36013}, {lat: 47.5571, lng: -122.36013}, {lat: 47.55721, lng: -122.36004}, {lat: 47.55739, lng: -122.36012}, {lat: 47.55905, lng: -122.36018}, {lat: 47.55963, lng: -122.35755}, {lat: 47.55967, lng: -122.35689}, {lat: 47.55954, lng: -122.35561}, {lat: 47.55932, lng: -122.35475}, {lat: 47.55908, lng: -122.35424}, {lat: 47.55864, lng: -122.35377}, {lat: 47.55858, lng: -122.35344}, {lat: 47.55879, lng: -122.35321}, {lat: 47.55937, lng: -122.35308}, {lat: 47.55937, lng: -122.35171}, {lat: 47.55788, lng: -122.3517}, {lat: 47.55742, lng: -122.35156}, {lat: 47.55701, lng: -122.3513}, {lat: 47.55641, lng: -122.35064}, {lat: 47.55477, lng: -122.34804}, {lat: 47.5541, lng: -122.34727}, {lat: 47.55398, lng: -122.34747}, {lat: 47.55378, lng: -122.34759}, {lat: 47.55218, lng: -122.34743}, {lat: 47.55168, lng: -122.34751}, {lat: 47.55155, lng: -122.3476}, {lat: 47.54999, lng: -122.3472}, {lat: 47.54939, lng: -122.34696}, {lat: 47.54926, lng: -122.34684}, {lat: 47.54911, lng: -122.34647}, {lat: 47.54895, lng: -122.34637}, {lat: 47.54728, lng: -122.34591}, {lat: 47.54649, lng: -122.346}, {lat: 47.54647, lng: -122.34563}, {lat: 47.54584, lng: -122.34562}, {lat: 47.54584, lng: -122.34593}, {lat: 47.54461, lng: -122.3458}, {lat: 47.54407, lng: -122.34536}, {lat: 47.54374, lng: -122.34436}, {lat: 47.54262, lng: -122.34407}, {lat: 47.54187, lng: -122.34373}, {lat: 47.54105, lng: -122.34307}, {lat: 47.54031, lng: -122.34211}, {lat: 47.54021, lng: -122.34352}, {lat: 47.53972, lng: -122.34532}, {lat: 47.53941, lng: -122.34592}, {lat: 47.53909, lng: -122.34624}, {lat: 47.53883, lng: -122.3464}, {lat: 47.53646, lng: -122.34711}, {lat: 47.53489, lng: -122.34719}, {lat: 47.53406, lng: -122.34705}, {lat: 47.53403, lng: -122.35063}, {lat: 47.53429, lng: -122.35212}, {lat: 47.5337, lng: -122.35395}, {lat: 47.53367, lng: -122.35506}, {lat: 47.53456, lng: -122.35507}, {lat: 47.53459, lng: -122.35667}, {lat: 47.53479, lng: -122.35719}, {lat: 47.53503, lng: -122.35744}, {lat: 47.53551, lng: -122.3576}, {lat: 47.53653, lng: -122.35767}, {lat: 47.53721, lng: -122.35799}, {lat: 47.53759, lng: -122.35837}, {lat: 47.53776, lng: -122.35883}, {lat: 47.53794, lng: -122.36109}, {lat: 47.54051, lng: -122.36076}, {lat: 47.54218, lng: -122.36123}, {lat: 47.54405, lng: -122.36122}, {lat: 47.54478, lng: -122.36151}, {lat: 47.54628, lng: -122.36269}, {lat: 47.54714, lng: -122.36303}, {lat: 47.55372, lng: -122.36296}, {lat: 47.55372, lng: -122.36003}, {lat: 47.55664, lng: -122.36013}]
+var b = {north:47.55967, south:47.53367, west:-122.36303, east:-122.34211,}
+var c = {lat:47.54667, lng:-122.35257}
+  
+  var everythingElse = [ // covers the (mercator projection) world
+    new google.maps.LatLng(85,180),
+    new google.maps.LatLng(85,90),
+    new google.maps.LatLng(85,0),
+    new google.maps.LatLng(85,-90),
+    new google.maps.LatLng(85,-180),
+    new google.maps.LatLng(0,-180),
+    new google.maps.LatLng(-85,-180),
+    new google.maps.LatLng(-85,-90),
+    new google.maps.LatLng(-85,0),
+    new google.maps.LatLng(-85,90),
+    new google.maps.LatLng(-85,180),
+    new google.maps.LatLng(0,180),
+    new google.maps.LatLng(85,180)];
+
+
+  // Define the LatLng coordinates for the polygon's path.
+var triangleCoords = p;
+
+const map = new google.maps.Map(document.getElementById("map"), {
+    mapId: "3782c2d2aeaec7e5", 
+    center: c,
+  });
+
+map.fitBounds(b);
+map.panToBounds(b);    
+
+  neighMap = new google.maps.Polygon({
+    paths: [everythingElse, triangleCoords],
+    strokeOpacity: 0,
+    strokeWeight: 0,
+    fillColor: "#fff",
+    fillOpacity: 1
+  });
+
+  neighMap.setMap(map);
+}
+
+
+  //]]></script>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "zr8fwkaL"
+      }], "*")
+    }
+
+    window.name = "result"
+  </script>
+
+
+    <!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Polygon</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- jsFiddle will insert css and js -->
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoB9ZE1UzodZ5hh3NLFdiZOMlzRn4jGrw&callback=initMap&v=weekly&channel=2"
+      async
+    ></script>
+  </body>
+</html>
+
+
+</body>
+</html>

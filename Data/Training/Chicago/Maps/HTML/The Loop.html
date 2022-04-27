@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+    
+  ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+    /* EOS */
+  </style>
+
+  <script id="insert"></script>
+
+
+</head>
+<body>
+      <script type="text/javascript">//<![CDATA[
+
+
+function initMap(p,c,b) {
+  
+var p = [{lat: 41.88889, lng: -87.62482}, {lat: 41.88888, lng: -87.62335}, {lat: 41.88831, lng: -87.61806}, {lat: 41.88842, lng: -87.6141}, {lat: 41.88811, lng: -87.61407}, {lat: 41.88811, lng: -87.61379}, {lat: 41.88794, lng: -87.61354}, {lat: 41.88794, lng: -87.61274}, {lat: 41.88444, lng: -87.61274}, {lat: 41.8844, lng: -87.62322}, {lat: 41.88446, lng: -87.62449}, {lat: 41.88356, lng: -87.62438}, {lat: 41.87569, lng: -87.62427}, {lat: 41.87559, lng: -87.63007}, {lat: 41.87561, lng: -87.63676}, {lat: 41.87623, lng: -87.63719}, {lat: 41.87707, lng: -87.63751}, {lat: 41.87934, lng: -87.63822}, {lat: 41.88006, lng: -87.63831}, {lat: 41.88193, lng: -87.63827}, {lat: 41.88535, lng: -87.63781}, {lat: 41.88623, lng: -87.63781}, {lat: 41.8874, lng: -87.63579}, {lat: 41.88746, lng: -87.63547}, {lat: 41.88742, lng: -87.6303}, {lat: 41.88748, lng: -87.62761}, {lat: 41.88874, lng: -87.62555}, {lat: 41.88889, lng: -87.62516}, {lat: 41.88889, lng: -87.62482}]
+var b = {north:41.88889, south:41.87559, west:-87.63831, east:-87.61274,}
+var c = {lat:41.88224, lng:-87.62552500000001}
+  
+  var everythingElse = [ // covers the (mercator projection) world
+    new google.maps.LatLng(85,180),
+    new google.maps.LatLng(85,90),
+    new google.maps.LatLng(85,0),
+    new google.maps.LatLng(85,-90),
+    new google.maps.LatLng(85,-180),
+    new google.maps.LatLng(0,-180),
+    new google.maps.LatLng(-85,-180),
+    new google.maps.LatLng(-85,-90),
+    new google.maps.LatLng(-85,0),
+    new google.maps.LatLng(-85,90),
+    new google.maps.LatLng(-85,180),
+    new google.maps.LatLng(0,180),
+    new google.maps.LatLng(85,180)];
+
+
+  // Define the LatLng coordinates for the polygon's path.
+var triangleCoords = p;
+
+const map = new google.maps.Map(document.getElementById("map"), {
+    mapId: "3782c2d2aeaec7e5", 
+    center: c,
+  });
+
+map.fitBounds(b);
+map.panToBounds(b);    
+
+  neighMap = new google.maps.Polygon({
+    paths: [everythingElse, triangleCoords],
+    strokeOpacity: 0,
+    strokeWeight: 0,
+    fillColor: "#fff",
+    fillOpacity: 1
+  });
+
+  neighMap.setMap(map);
+}
+
+
+  //]]></script>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "zr8fwkaL"
+      }], "*")
+    }
+
+    window.name = "result"
+  </script>
+
+
+    <!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Polygon</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- jsFiddle will insert css and js -->
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoB9ZE1UzodZ5hh3NLFdiZOMlzRn4jGrw&callback=initMap&v=weekly&channel=2"
+      async
+    ></script>
+  </body>
+</html>
+
+
+</body>
+</html>

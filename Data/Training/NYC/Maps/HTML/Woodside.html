@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+    
+  ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+    /* EOS */
+  </style>
+
+  <script id="insert"></script>
+
+
+</head>
+<body>
+      <script type="text/javascript">//<![CDATA[
+
+
+function initMap(p,c,b) {
+  
+var p = [{lat: 40.75559, lng: -73.91182}, {lat: 40.75563, lng: -73.9119}, {lat: 40.75803, lng: -73.9098}, {lat: 40.76585, lng: -73.90355}, {lat: 40.768, lng: -73.90442}, {lat: 40.76626, lng: -73.89308}, {lat: 40.76594, lng: -73.89342}, {lat: 40.76577, lng: -73.89403}, {lat: 40.76547, lng: -73.89444}, {lat: 40.76416, lng: -73.89519}, {lat: 40.76312, lng: -73.89643}, {lat: 40.759, lng: -73.89934}, {lat: 40.75825, lng: -73.89975}, {lat: 40.7574, lng: -73.89995}, {lat: 40.75653, lng: -73.89983}, {lat: 40.75505, lng: -73.89925}, {lat: 40.75308, lng: -73.89798}, {lat: 40.75244, lng: -73.89765}, {lat: 40.7507, lng: -73.89728}, {lat: 40.75007, lng: -73.89708}, {lat: 40.74729, lng: -73.89539}, {lat: 40.74607, lng: -73.89473}, {lat: 40.74528, lng: -73.89458}, {lat: 40.74462, lng: -73.8947}, {lat: 40.74399, lng: -73.89508}, {lat: 40.7436, lng: -73.89545}, {lat: 40.73994, lng: -73.89994}, {lat: 40.73933, lng: -73.90085}, {lat: 40.73893, lng: -73.90173}, {lat: 40.73831, lng: -73.90345}, {lat: 40.73695, lng: -73.90659}, {lat: 40.73663, lng: -73.90765}, {lat: 40.73638, lng: -73.90928}, {lat: 40.73854, lng: -73.90834}, {lat: 40.74185, lng: -73.90751}, {lat: 40.74273, lng: -73.91499}, {lat: 40.75103, lng: -73.91336}, {lat: 40.75163, lng: -73.90985}, {lat: 40.75297, lng: -73.91046}, {lat: 40.75346, lng: -73.91354}, {lat: 40.75559, lng: -73.91182}]
+var b = {north:40.768, south:40.73638, west:-73.91499, east:-73.89308,}
+var c = {lat:40.75219, lng:-73.904035}
+  
+  var everythingElse = [ // covers the (mercator projection) world
+    new google.maps.LatLng(85,180),
+    new google.maps.LatLng(85,90),
+    new google.maps.LatLng(85,0),
+    new google.maps.LatLng(85,-90),
+    new google.maps.LatLng(85,-180),
+    new google.maps.LatLng(0,-180),
+    new google.maps.LatLng(-85,-180),
+    new google.maps.LatLng(-85,-90),
+    new google.maps.LatLng(-85,0),
+    new google.maps.LatLng(-85,90),
+    new google.maps.LatLng(-85,180),
+    new google.maps.LatLng(0,180),
+    new google.maps.LatLng(85,180)];
+
+
+  // Define the LatLng coordinates for the polygon's path.
+var triangleCoords = p;
+
+const map = new google.maps.Map(document.getElementById("map"), {
+    mapId: "3782c2d2aeaec7e5", 
+    center: c,
+  });
+
+map.fitBounds(b);
+map.panToBounds(b);    
+
+  neighMap = new google.maps.Polygon({
+    paths: [everythingElse, triangleCoords],
+    strokeOpacity: 0,
+    strokeWeight: 0,
+    fillColor: "#fff",
+    fillOpacity: 1
+  });
+
+  neighMap.setMap(map);
+}
+
+
+  //]]></script>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "zr8fwkaL"
+      }], "*")
+    }
+
+    window.name = "result"
+  </script>
+
+
+    <!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Polygon</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- jsFiddle will insert css and js -->
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoB9ZE1UzodZ5hh3NLFdiZOMlzRn4jGrw&callback=initMap&v=weekly&channel=2"
+      async
+    ></script>
+  </body>
+</html>
+
+
+</body>
+</html>

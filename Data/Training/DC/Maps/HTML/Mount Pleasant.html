@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+    
+  ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+    /* EOS */
+  </style>
+
+  <script id="insert"></script>
+
+
+</head>
+<body>
+      <script type="text/javascript">//<![CDATA[
+
+
+function initMap(p,c,b) {
+  
+var p = [{lat: 38.92841, lng: -77.03648}, {lat: 38.92723, lng: -77.03648}, {lat: 38.927, lng: -77.03742}, {lat: 38.92697, lng: -77.0376}, {lat: 38.92719, lng: -77.03836}, {lat: 38.92717, lng: -77.04185}, {lat: 38.92783, lng: -77.04289}, {lat: 38.928, lng: -77.04344}, {lat: 38.92805, lng: -77.04391}, {lat: 38.92872, lng: -77.04411}, {lat: 38.92984, lng: -77.04486}, {lat: 38.93147, lng: -77.04686}, {lat: 38.93192, lng: -77.04771}, {lat: 38.93231, lng: -77.0495}, {lat: 38.93248, lng: -77.04991}, {lat: 38.93283, lng: -77.05022}, {lat: 38.93303, lng: -77.05024}, {lat: 38.9332, lng: -77.05011}, {lat: 38.93412, lng: -77.04837}, {lat: 38.93505, lng: -77.04775}, {lat: 38.93515, lng: -77.04751}, {lat: 38.93595, lng: -77.04509}, {lat: 38.93599, lng: -77.04331}, {lat: 38.93619, lng: -77.04122}, {lat: 38.93675, lng: -77.04}, {lat: 38.93709, lng: -77.03889}, {lat: 38.93786, lng: -77.03741}, {lat: 38.93823, lng: -77.03647}, {lat: 38.92841, lng: -77.03648}]
+var b = {north:38.93823, south:38.92697, west:-77.05024, east:-77.03647,}
+var c = {lat:38.932599999999994, lng:-77.04335499999999}
+  
+  var everythingElse = [ // covers the (mercator projection) world
+    new google.maps.LatLng(85,180),
+    new google.maps.LatLng(85,90),
+    new google.maps.LatLng(85,0),
+    new google.maps.LatLng(85,-90),
+    new google.maps.LatLng(85,-180),
+    new google.maps.LatLng(0,-180),
+    new google.maps.LatLng(-85,-180),
+    new google.maps.LatLng(-85,-90),
+    new google.maps.LatLng(-85,0),
+    new google.maps.LatLng(-85,90),
+    new google.maps.LatLng(-85,180),
+    new google.maps.LatLng(0,180),
+    new google.maps.LatLng(85,180)];
+
+
+  // Define the LatLng coordinates for the polygon's path.
+var triangleCoords = p;
+
+const map = new google.maps.Map(document.getElementById("map"), {
+    mapId: "3782c2d2aeaec7e5", 
+    center: c,
+  });
+
+map.fitBounds(b);
+map.panToBounds(b);    
+
+  neighMap = new google.maps.Polygon({
+    paths: [everythingElse, triangleCoords],
+    strokeOpacity: 0,
+    strokeWeight: 0,
+    fillColor: "#fff",
+    fillOpacity: 1
+  });
+
+  neighMap.setMap(map);
+}
+
+
+  //]]></script>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "zr8fwkaL"
+      }], "*")
+    }
+
+    window.name = "result"
+  </script>
+
+
+    <!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Polygon</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- jsFiddle will insert css and js -->
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoB9ZE1UzodZ5hh3NLFdiZOMlzRn4jGrw&callback=initMap&v=weekly&channel=2"
+      async
+    ></script>
+  </body>
+</html>
+
+
+</body>
+</html>

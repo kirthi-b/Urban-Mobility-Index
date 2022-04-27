@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+    
+  ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+    /* EOS */
+  </style>
+
+  <script id="insert"></script>
+
+
+</head>
+<body>
+      <script type="text/javascript">//<![CDATA[
+
+
+function initMap(p,c,b) {
+  
+var p = [{lat: 43.06233, lng: -89.4724}, {lat: 43.06274, lng: -89.47236}, {lat: 43.06311, lng: -89.47222}, {lat: 43.06486, lng: -89.47081}, {lat: 43.06567, lng: -89.46935}, {lat: 43.06707, lng: -89.46844}, {lat: 43.07164, lng: -89.46844}, {lat: 43.07311, lng: -89.46799}, {lat: 43.07273, lng: -89.46586}, {lat: 43.073, lng: -89.46319}, {lat: 43.0728, lng: -89.45973}, {lat: 43.07305, lng: -89.45671}, {lat: 43.0723, lng: -89.45626}, {lat: 43.07091, lng: -89.4547}, {lat: 43.07052, lng: -89.45433}, {lat: 43.07026, lng: -89.45421}, {lat: 43.07005, lng: -89.45412}, {lat: 43.0694, lng: -89.45416}, {lat: 43.06858, lng: -89.4546}, {lat: 43.06793, lng: -89.45472}, {lat: 43.06764, lng: -89.45469}, {lat: 43.06681, lng: -89.4544}, {lat: 43.06464, lng: -89.45437}, {lat: 43.0642, lng: -89.45461}, {lat: 43.06404, lng: -89.45482}, {lat: 43.06386, lng: -89.45534}, {lat: 43.0629, lng: -89.45519}, {lat: 43.06288, lng: -89.4542}, {lat: 43.06084, lng: -89.45412}, {lat: 43.06094, lng: -89.4633}, {lat: 43.06088, lng: -89.47215}, {lat: 43.06233, lng: -89.4724}]
+var b = {north:43.07311, south:43.06084, west:-89.4724, east:-89.45412,}
+var c = {lat:43.066975, lng:-89.46325999999999}
+  
+  var everythingElse = [ // covers the (mercator projection) world
+    new google.maps.LatLng(85,180),
+    new google.maps.LatLng(85,90),
+    new google.maps.LatLng(85,0),
+    new google.maps.LatLng(85,-90),
+    new google.maps.LatLng(85,-180),
+    new google.maps.LatLng(0,-180),
+    new google.maps.LatLng(-85,-180),
+    new google.maps.LatLng(-85,-90),
+    new google.maps.LatLng(-85,0),
+    new google.maps.LatLng(-85,90),
+    new google.maps.LatLng(-85,180),
+    new google.maps.LatLng(0,180),
+    new google.maps.LatLng(85,180)];
+
+
+  // Define the LatLng coordinates for the polygon's path.
+var triangleCoords = p;
+
+const map = new google.maps.Map(document.getElementById("map"), {
+    mapId: "3782c2d2aeaec7e5", 
+    center: c,
+  });
+
+map.fitBounds(b);
+map.panToBounds(b);    
+
+  neighMap = new google.maps.Polygon({
+    paths: [everythingElse, triangleCoords],
+    strokeOpacity: 0,
+    strokeWeight: 0,
+    fillColor: "#fff",
+    fillOpacity: 1
+  });
+
+  neighMap.setMap(map);
+}
+
+
+  //]]></script>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "zr8fwkaL"
+      }], "*")
+    }
+
+    window.name = "result"
+  </script>
+
+
+    <!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Polygon</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- jsFiddle will insert css and js -->
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoB9ZE1UzodZ5hh3NLFdiZOMlzRn4jGrw&callback=initMap&v=weekly&channel=2"
+      async
+    ></script>
+  </body>
+</html>
+
+
+</body>
+</html>

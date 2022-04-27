@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+    
+  ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+    /* EOS */
+  </style>
+
+  <script id="insert"></script>
+
+
+</head>
+<body>
+      <script type="text/javascript">//<![CDATA[
+
+
+function initMap(p,c,b) {
+  
+var p = [{lat: 40.73068, lng: -73.87509}, {lat: 40.73238, lng: -73.86945}, {lat: 40.73379, lng: -73.86516}, {lat: 40.73576, lng: -73.85857}, {lat: 40.7365, lng: -73.85603}, {lat: 40.73686, lng: -73.85419}, {lat: 40.73018, lng: -73.85076}, {lat: 40.7296, lng: -73.85019}, {lat: 40.72907, lng: -73.84939}, {lat: 40.72763, lng: -73.84911}, {lat: 40.72652, lng: -73.84864}, {lat: 40.72565, lng: -73.84803}, {lat: 40.72447, lng: -73.84681}, {lat: 40.72398, lng: -73.84657}, {lat: 40.72365, lng: -73.84655}, {lat: 40.72333, lng: -73.84669}, {lat: 40.72304, lng: -73.84699}, {lat: 40.72261, lng: -73.84916}, {lat: 40.72255, lng: -73.85212}, {lat: 40.72149, lng: -73.85483}, {lat: 40.72117, lng: -73.85514}, {lat: 40.7191, lng: -73.85612}, {lat: 40.71407, lng: -73.85927}, {lat: 40.71394, lng: -73.85965}, {lat: 40.71459, lng: -73.85985}, {lat: 40.71491, lng: -73.86004}, {lat: 40.71768, lng: -73.863}, {lat: 40.72455, lng: -73.86938}, {lat: 40.7273, lng: -73.87076}, {lat: 40.72934, lng: -73.87144}, {lat: 40.73068, lng: -73.87509}]
+var b = {north:40.73686, south:40.71394, west:-73.87509, east:-73.84655,}
+var c = {lat:40.7254, lng:-73.86081999999999}
+  
+  var everythingElse = [ // covers the (mercator projection) world
+    new google.maps.LatLng(85,180),
+    new google.maps.LatLng(85,90),
+    new google.maps.LatLng(85,0),
+    new google.maps.LatLng(85,-90),
+    new google.maps.LatLng(85,-180),
+    new google.maps.LatLng(0,-180),
+    new google.maps.LatLng(-85,-180),
+    new google.maps.LatLng(-85,-90),
+    new google.maps.LatLng(-85,0),
+    new google.maps.LatLng(-85,90),
+    new google.maps.LatLng(-85,180),
+    new google.maps.LatLng(0,180),
+    new google.maps.LatLng(85,180)];
+
+
+  // Define the LatLng coordinates for the polygon's path.
+var triangleCoords = p;
+
+const map = new google.maps.Map(document.getElementById("map"), {
+    mapId: "3782c2d2aeaec7e5", 
+    center: c,
+  });
+
+map.fitBounds(b);
+map.panToBounds(b);    
+
+  neighMap = new google.maps.Polygon({
+    paths: [everythingElse, triangleCoords],
+    strokeOpacity: 0,
+    strokeWeight: 0,
+    fillColor: "#fff",
+    fillOpacity: 1
+  });
+
+  neighMap.setMap(map);
+}
+
+
+  //]]></script>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "zr8fwkaL"
+      }], "*")
+    }
+
+    window.name = "result"
+  </script>
+
+
+    <!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Polygon</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- jsFiddle will insert css and js -->
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoB9ZE1UzodZ5hh3NLFdiZOMlzRn4jGrw&callback=initMap&v=weekly&channel=2"
+      async
+    ></script>
+  </body>
+</html>
+
+
+</body>
+</html>

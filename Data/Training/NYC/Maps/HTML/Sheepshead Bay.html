@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+    
+  ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+    /* EOS */
+  </style>
+
+  <script id="insert"></script>
+
+
+</head>
+<body>
+      <script type="text/javascript">//<![CDATA[
+
+
+function initMap(p,c,b) {
+  
+var p = [{lat: 40.58309, lng: -73.93421}, {lat: 40.58315, lng: -73.93456}, {lat: 40.58301, lng: -73.93457}, {lat: 40.583, lng: -73.93474}, {lat: 40.58308, lng: -73.93527}, {lat: 40.5829, lng: -73.93611}, {lat: 40.58297, lng: -73.93756}, {lat: 40.58293, lng: -73.93859}, {lat: 40.58295, lng: -73.93888}, {lat: 40.58314, lng: -73.93888}, {lat: 40.58314, lng: -73.93986}, {lat: 40.58308, lng: -73.94007}, {lat: 40.58299, lng: -73.94006}, {lat: 40.58296, lng: -73.94071}, {lat: 40.58308, lng: -73.94202}, {lat: 40.58318, lng: -73.94703}, {lat: 40.58352, lng: -73.94755}, {lat: 40.58298, lng: -73.95351}, {lat: 40.58318, lng: -73.95354}, {lat: 40.58317, lng: -73.95381}, {lat: 40.58255, lng: -73.95706}, {lat: 40.58504, lng: -73.95761}, {lat: 40.58429, lng: -73.96296}, {lat: 40.58398, lng: -73.96678}, {lat: 40.59334, lng: -73.96464}, {lat: 40.6094, lng: -73.96768}, {lat: 40.61092, lng: -73.95359}, {lat: 40.61139, lng: -73.95121}, {lat: 40.61161, lng: -73.95077}, {lat: 40.61316, lng: -73.94899}, {lat: 40.61604, lng: -73.94483}, {lat: 40.60931, lng: -73.94356}, {lat: 40.60094, lng: -73.9342}, {lat: 40.59476, lng: -73.93304}, {lat: 40.59475, lng: -73.93283}, {lat: 40.59455, lng: -73.93239}, {lat: 40.59394, lng: -73.93172}, {lat: 40.59384, lng: -73.93125}, {lat: 40.59347, lng: -73.93088}, {lat: 40.59322, lng: -73.93078}, {lat: 40.59241, lng: -73.93076}, {lat: 40.59086, lng: -73.93107}, {lat: 40.58995, lng: -73.93092}, {lat: 40.58953, lng: -73.93064}, {lat: 40.5892, lng: -73.93028}, {lat: 40.58818, lng: -73.92899}, {lat: 40.58767, lng: -73.92848}, {lat: 40.58603, lng: -73.92637}, {lat: 40.58553, lng: -73.92561}, {lat: 40.58527, lng: -73.92495}, {lat: 40.58355, lng: -73.92495}, {lat: 40.58358, lng: -73.92709}, {lat: 40.5834, lng: -73.92917}, {lat: 40.58316, lng: -73.9304}, {lat: 40.58296, lng: -73.93079}, {lat: 40.58277, lng: -73.93077}, {lat: 40.58279, lng: -73.93092}, {lat: 40.58273, lng: -73.93097}, {lat: 40.58304, lng: -73.93349}, {lat: 40.58294, lng: -73.93349}, {lat: 40.58294, lng: -73.93421}, {lat: 40.58309, lng: -73.93421}]
+var b = {north:40.61604, south:40.58255, west:-73.96768, east:-73.92495,}
+var c = {lat:40.599295, lng:-73.946315}
+  
+  var everythingElse = [ // covers the (mercator projection) world
+    new google.maps.LatLng(85,180),
+    new google.maps.LatLng(85,90),
+    new google.maps.LatLng(85,0),
+    new google.maps.LatLng(85,-90),
+    new google.maps.LatLng(85,-180),
+    new google.maps.LatLng(0,-180),
+    new google.maps.LatLng(-85,-180),
+    new google.maps.LatLng(-85,-90),
+    new google.maps.LatLng(-85,0),
+    new google.maps.LatLng(-85,90),
+    new google.maps.LatLng(-85,180),
+    new google.maps.LatLng(0,180),
+    new google.maps.LatLng(85,180)];
+
+
+  // Define the LatLng coordinates for the polygon's path.
+var triangleCoords = p;
+
+const map = new google.maps.Map(document.getElementById("map"), {
+    mapId: "3782c2d2aeaec7e5", 
+    center: c,
+  });
+
+map.fitBounds(b);
+map.panToBounds(b);    
+
+  neighMap = new google.maps.Polygon({
+    paths: [everythingElse, triangleCoords],
+    strokeOpacity: 0,
+    strokeWeight: 0,
+    fillColor: "#fff",
+    fillOpacity: 1
+  });
+
+  neighMap.setMap(map);
+}
+
+
+  //]]></script>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "zr8fwkaL"
+      }], "*")
+    }
+
+    window.name = "result"
+  </script>
+
+
+    <!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Polygon</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- jsFiddle will insert css and js -->
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoB9ZE1UzodZ5hh3NLFdiZOMlzRn4jGrw&callback=initMap&v=weekly&channel=2"
+      async
+    ></script>
+  </body>
+</html>
+
+
+</body>
+</html>

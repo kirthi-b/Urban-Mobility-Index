@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+    
+  ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+    /* EOS */
+  </style>
+
+  <script id="insert"></script>
+
+
+</head>
+<body>
+      <script type="text/javascript">//<![CDATA[
+
+
+function initMap(p,c,b) {
+  
+var p = [{lat: 43.06112, lng: -89.41932}, {lat: 43.061, lng: -89.41948}, {lat: 43.0592, lng: -89.41711}, {lat: 43.05909, lng: -89.41752}, {lat: 43.05742, lng: -89.41815}, {lat: 43.05711, lng: -89.4194}, {lat: 43.05537, lng: -89.42394}, {lat: 43.05584, lng: -89.42709}, {lat: 43.05654, lng: -89.42795}, {lat: 43.05608, lng: -89.42865}, {lat: 43.05591, lng: -89.42914}, {lat: 43.05479, lng: -89.43091}, {lat: 43.05471, lng: -89.43143}, {lat: 43.05498, lng: -89.43213}, {lat: 43.05205, lng: -89.4366}, {lat: 43.05149, lng: -89.43653}, {lat: 43.05152, lng: -89.43762}, {lat: 43.05133, lng: -89.4431}, {lat: 43.05369, lng: -89.44027}, {lat: 43.05485, lng: -89.4387}, {lat: 43.0596, lng: -89.43051}, {lat: 43.06061, lng: -89.42906}, {lat: 43.06316, lng: -89.42591}, {lat: 43.06322, lng: -89.42575}, {lat: 43.06302, lng: -89.42583}, {lat: 43.06512, lng: -89.42256}, {lat: 43.06673, lng: -89.41741}, {lat: 43.0678, lng: -89.41279}, {lat: 43.0624, lng: -89.4209}, {lat: 43.06112, lng: -89.41932}]
+var b = {north:43.0678, south:43.05133, west:-89.4431, east:-89.41279,}
+var c = {lat:43.059565, lng:-89.427945}
+  
+  var everythingElse = [ // covers the (mercator projection) world
+    new google.maps.LatLng(85,180),
+    new google.maps.LatLng(85,90),
+    new google.maps.LatLng(85,0),
+    new google.maps.LatLng(85,-90),
+    new google.maps.LatLng(85,-180),
+    new google.maps.LatLng(0,-180),
+    new google.maps.LatLng(-85,-180),
+    new google.maps.LatLng(-85,-90),
+    new google.maps.LatLng(-85,0),
+    new google.maps.LatLng(-85,90),
+    new google.maps.LatLng(-85,180),
+    new google.maps.LatLng(0,180),
+    new google.maps.LatLng(85,180)];
+
+
+  // Define the LatLng coordinates for the polygon's path.
+var triangleCoords = p;
+
+const map = new google.maps.Map(document.getElementById("map"), {
+    mapId: "3782c2d2aeaec7e5", 
+    center: c,
+  });
+
+map.fitBounds(b);
+map.panToBounds(b);    
+
+  neighMap = new google.maps.Polygon({
+    paths: [everythingElse, triangleCoords],
+    strokeOpacity: 0,
+    strokeWeight: 0,
+    fillColor: "#fff",
+    fillOpacity: 1
+  });
+
+  neighMap.setMap(map);
+}
+
+
+  //]]></script>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "zr8fwkaL"
+      }], "*")
+    }
+
+    window.name = "result"
+  </script>
+
+
+    <!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Polygon</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- jsFiddle will insert css and js -->
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoB9ZE1UzodZ5hh3NLFdiZOMlzRn4jGrw&callback=initMap&v=weekly&channel=2"
+      async
+    ></script>
+  </body>
+</html>
+
+
+</body>
+</html>
